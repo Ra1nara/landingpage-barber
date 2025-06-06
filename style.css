@@ -2,6 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
+}
+html, body{
+  overflow-x: hidden;
+
 }
 
 header {
@@ -11,14 +16,13 @@ header {
 
 header .container {
   display: flex;
-  align-items: center; /* para centralizar verticalmente */
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
-  line-height: 0.8;
-  gap: 10%;
-  padding: 1% 0;
-  max-width: 100%;
-  max-height: 4em;
-  margin-right: 8%;
+  gap: 1em;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0.5em 1em;
 }
 #logo {
   max-width: 100%;
@@ -28,13 +32,19 @@ header .container {
 #linksLogo ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
 #linksLogo ul li {
-  display: inline;
-  flex-wrap: wrap;
+  display: flex;
   list-style: none;
+  padding: 0.5em 0.5em;
+  border-radius: 8%;
+}
+#linksLogo ul li:hover {
+  background-color: #ee9038;
+  transition-duration: 0.2s;
 }
 
 #linksLogo a {
@@ -51,7 +61,7 @@ header .container {
 #home {
   position: relative;
   min-height: 100vh;
-  max-width: 100vw;
+  max-width: 100%;
   overflow: hidden; /* garante que pseudo-elemento não vaze */
 }
 /* Imagem de fundo */
@@ -106,7 +116,7 @@ header .container {
   height: 80vh;
   width: 100vw;
   z-index: 3;
-  font-size: 3rem;
+  font-size: 3em;
   text-align: center;
 }
 .content img {
@@ -119,6 +129,95 @@ header .container {
 .content h2 {
   position: relative;
   color: #ee9038;
+}
+
+.low-edge {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+}
+.low-edge img {
+  width: 100%;
+  display: block;
+}
+
+/* About */
+#about {
+  max-width: 100%;
+  height: 492px;
+  background-color: rgba(32, 32, 36, 1);
+  overflow: hidden;
+}
+
+.high-edge {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+
+}
+.high-edge img {
+  width: 100%;
+  display: block;
+}
+
+#service {
+  background: rgba(45, 46, 51, 1);
+  max-width: 100vw;
+  height: 355px;
+}
+
+#gallery {
+  max-width: 100vw;
+  height: 855px;
+  background: linear-gradient(
+    99.58deg,
+    #ba702c 4.18%,
+    #ee9038 51.65%,
+    #ba702c 96.6%
+  );
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#our-team {
+  background-image: url(./assets/team-background.jpg);
+  background-position: center 50%;
+  max-width: 100vw;
+  height: 567px;
+  opacity: 0.5;
+}
+
+#brands {
+  max-width: 100vw;
+  height: 164px;
+  background: rgba(202, 122, 46, 1);
+}
+
+#our-numbers {
+  max-width: 100vw;
+  height: 366px;
+  background: linear-gradient(88.42deg, #202024 0%, #2e2f33 97.64%);
+}
+
+#share-social {
+  width: 100vw;
+  height: 70px;
+  background: linear-gradient(191.53deg, #292a2e 8.11%, #434347 91.17%);
+}
+
+#contact-form {
+  width: 100vw;
+  height: 467px;
+  background: rgba(72, 73, 82, 1);
+}
+
+footer {
+  max-width: 100vw;
+  height: 242px;
+  background: rgba(32, 32, 36, 1);
 }
 
 /* Responsividade */
