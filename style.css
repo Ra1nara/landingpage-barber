@@ -5,6 +5,8 @@
   font-family: "League Gothic", sans-serif;
   
 }
+
+
 html, body{
   overflow-x: hidden;
 
@@ -147,7 +149,7 @@ header .container {
 
 /* About */
 #about {
-  max-width: 100%;
+  width: 100%;
   height: 492px;
   background-color: rgba(32, 32, 36, 1);
   overflow: hidden;
@@ -155,8 +157,7 @@ header .container {
 
 .high-edge {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  max-height: 2em;
 
 }
 .high-edge img {
@@ -164,11 +165,42 @@ header .container {
   display: block;
 }
 
+#title-about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title-about h2{
+  color: white;
+  font-weight: 400;
+}
+
+#about .sobre{
+  display: flex;
+  gap: 3em;
+  margin: 2em 8em;
+
+}
+.sobre p{
+  width: 45%;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "open sans", sans-serif;
+}
+.sobre img{
+  width: 45%;
+}
+
 #service {
   background: rgba(45, 46, 51, 1);
   max-width: 100vw;
   height: 355px;
 }
+
+
 
 #gallery {
   max-width: 100vw;
@@ -180,6 +212,10 @@ header .container {
     #ba702c 96.6%
   );
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#gallery img{
+  max-width: 25%;
+
 }
 
 #our-team {
@@ -213,13 +249,34 @@ header .container {
 }
 
 #contact-form {
+  background-image: url(./assets/mapa.png);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100vw;
   height: 467px;
-  background: rgba(72, 73, 82, 1);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+#contact-form::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000a9;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#forms{
+  display: flex;
+  position: relative;
+  z-index: 3;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
 }
 
 #contact-form h2{
@@ -229,16 +286,20 @@ header .container {
   font-weight: 400;
 }
 #contact-form h3{
-  color: #ba702c;
+  color: rgba(238, 144, 56, 1);
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 2em;
 }
 
 #contact-form form{
+  color: rgba(238, 144, 56, 1);
+  font-size: 16px;
+  font-weight: 400;
   display:flex;
   flex-direction: column;
   margin: auto 3em;
+  
 
 }
 
