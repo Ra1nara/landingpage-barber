@@ -150,7 +150,7 @@ header .container {
 /* About */
 #about {
   width: 100%;
-  height: 492px;
+  min-height: 492px;
   background-color: rgba(32, 32, 36, 1);
   overflow: hidden;
 }
@@ -179,26 +179,36 @@ header .container {
 
 #about .sobre{
   display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
   gap: 3em;
-  margin: 2em 8em;
+  margin: 2em 6em;
 
 }
 .sobre p{
-  width: 45%;
+  max-width: 45%;
+  max-height: 100%;
   color: white;
   font-weight: 400;
   font-size: 16px;
   font-family: "open sans", sans-serif;
 }
 .sobre img{
-  width: 45%;
+  max-width: 45%;
+  height: 250px;
 }
 
 #service {
+  display: flex;
   background: rgba(45, 46, 51, 1);
   max-width: 100vw;
   height: 355px;
+  align-items: center;
+  justify-content: center;
+
 }
+
 
 
 
