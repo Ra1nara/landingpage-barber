@@ -588,7 +588,18 @@ footer ion-icon{
   .content {
     font-size: 2.5rem;
   }
-  
+  .sobre {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    place-items: center;
+    place-content: center;
+  }
+
+  .sobre img{
+    max-width: 80%;
+  }
+
   #galleryrow {
     grid-template: repeat(4, 1fr) / repeat(3, 1fr);
   }
