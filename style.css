@@ -18,14 +18,15 @@ ion-icon {
 html,
 body {
   overflow-x: hidden;
+  
 }
-
-
 
 .container{
   width: 70%;
-  place-items: center;
-  place-content:center;
+  align-items: center;
+  align-content: center ;
+  justify-items: center ;
+  justify-content:space-between;
   text-align: center;
   height: auto;
   position: relative;
