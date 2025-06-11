@@ -211,6 +211,7 @@ header {
 
 /* About */
 #about {
+  display: grid;
   width: 100%;
   background-color: rgba(32, 32, 36, 1);
   place-items: center;
