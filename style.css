@@ -214,8 +214,9 @@ header {
   width: 100%;
   background-color: rgba(32, 32, 36, 1);
   place-items: center;
-  justify-content: center;
+  place-content: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 .high-edge {
@@ -347,6 +348,7 @@ header {
 
 /*-- EQUIPE --*/
 #our-team {
+  display: grid;
   background-image: url(./assets/team-background.jpg);
   background-position: right;
   background-size: 100%;
@@ -354,8 +356,7 @@ header {
   z-index: 0;
   place-items: center;
   place-content: center;
-  margin: 0 auto;
-  padding: 0 1em;
+  text-align: center;
 
 
 }
@@ -394,6 +395,7 @@ header {
   color:#ee9038;
   position: relative;
   z-index: 3;
+  
 }
 
 #our-team h5{
