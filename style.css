@@ -50,9 +50,11 @@ header {
   height: auto;
   place-items: center;
   place-content: center;
+  
 }
 .menu {
-  display: flex;
+  display: grid;
+  grid-template: repeat(1, 1fr)/repeat(2, 1fr);
   justify-content: space-between;
 }
 
@@ -160,6 +162,9 @@ header {
   letter-spacing: 2px;
   z-index: 3;
   font-size: 3em;
+  text-align: center;
+  place-content: center;
+  place-items: center;
 
 }
 .content img {
@@ -239,6 +244,7 @@ header {
   height: auto;
   place-content: center;
   place-items: center;
+  padding: 2em 0;
 }
 
 #service .bigode {
@@ -302,6 +308,7 @@ header {
   );
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  padding: 2em 0;
 }
 
 
@@ -332,6 +339,7 @@ header {
   overflow: hidden;
   place-items: center;
   place-content: center;
+  padding: 2em 0;
 
 
 }
@@ -512,11 +520,9 @@ footer {
     display: none;
     position: absolute;
     top: 100%;
-    right: 1rem;
     background-color: rgba(32, 32, 36, 0.95);
     flex-direction: column;
     width: 200px;
-    padding: 1rem;
     border-radius: 8px;
   }
 
@@ -528,12 +534,9 @@ footer {
     padding: 0.5rem 0;
   }
 
-  .content {
-    font-size: 2rem;
-  }
 
   h1 {
-  font-size: 2em;
+  font-size: 1.7em;
   }
   h2{
   font-size: 1.5em;
