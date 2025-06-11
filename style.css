@@ -60,13 +60,13 @@ header {
   background-color: rgba(32, 32, 36, 0.9);
   height: auto;
   place-items: center;
-  place-content: center;
+  justify-content: space-between;
   
 }
 .menu {
   display: grid;
   grid-template: repeat(1, 1fr)/repeat(2, 1fr);
-  justify-content: space-between;
+  
 }
 
 #logo {
@@ -424,6 +424,7 @@ header {
 #redes div{
   display: grid;
   grid-template:repeat(1,1fr)/repeat(4,1fr);
+  gap: 1em;
 
   
 }
@@ -640,5 +641,9 @@ footer ion-icon{
 
   #galleryrow {
     grid-template: repeat(6, 1fr) / repeat(2, 1fr);
+  }
+
+  .container{
+    overflow: hidden;
   }
 }
