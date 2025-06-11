@@ -26,6 +26,7 @@ body {
   width: 70%;
   place-items: center;
   place-content:center;
+  text-align: center;
   height: auto;
   margin: 1em 10em 2em;
   position: relative;
