@@ -27,12 +27,13 @@ body {
 }
 .title{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
+  place-content: center;
   margin: 0.3em 3em;
   gap: 1em;
 
 }
+
 
 h2,
 h3{
@@ -416,6 +417,17 @@ header {
   position: relative;
   z-index: 0;
 }
+#contact-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000d1;
+  pointer-events: none;
+  z-index: 1;
+}
 #contact-form::after {
   content: "";
   position: absolute;
@@ -423,9 +435,9 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #000000a9;
-  pointer-events: none;
-  z-index: 1;
+  background: url("./assets/textura.png") no-repeat center;
+  background-size: cover;
+  z-index: 2;
 }
 
 #forms {
@@ -437,24 +449,75 @@ header {
   flex-direction: column;
 }
 
+form{
+  margin: 2em;
+}
+
 #contact-form h2 {
   margin: 1em auto 0;
   color: white;
   
 }
 #contact-form h3 {
-  color: rgba(238, 144, 56, 1);
-  margin-bottom: 2em;
+  color:#ee9038;
+  font-size: 1em;
+
+
 }
 
 #contact-form form {
   color: rgba(238, 144, 56, 1);
+  font-family: sans-serif;
   font-size: 16px;
   font-weight: 400;
   display: flex;
   flex-direction: column;
-  margin: auto 3em;
+  gap: 1em;
+  text-align:start;
 }
+fieldset{
+  display: grid;
+  grid-template: repeat(1, 1fr)/ repeat(2, 1fr);
+  gap: 0.8em;
+}
+
+#contact-form fieldset,
+#contact-form input, 
+#contact-form textarea{
+  border: none;
+  background: none;
+}
+#forms div{
+  border-bottom: 1px solid #ffffff;
+}
+
+#forms input:focus,
+#forms textarea {
+  outline: none;
+  border: none; /* se quiser tirar a borda também */
+ color: #ffffff;
+}
+
+#forms textarea{
+  resize: none;      /* impede redimensionamento manual */
+  overflow: hidden;  /* remove a barra de rolagem */
+  width: 100%;
+  
+}
+
+#forms input{
+  color: #ebebeb;
+}
+
+#forms div{
+  width: 100%;
+  
+}
+
+
+
+
+
 
 footer {
   max-width: 100vw;
