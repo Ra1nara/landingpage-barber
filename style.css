@@ -39,6 +39,8 @@ body {
   place-content: center;
   margin: 0.3em 3em;
   gap: 1em;
+  position: relative;
+  z-index: 3;
 
 }
 
@@ -121,6 +123,7 @@ header {
 
 /*-- HOME --*/
 #home {
+  display: flex;
   position: relative;
   min-height: 100dvh;
   max-width: 100%;
@@ -210,10 +213,9 @@ header {
 #about {
   width: 100%;
   background-color: rgba(32, 32, 36, 1);
-  place-content: center;
   place-items: center;
+  justify-content: center;
   margin: 0 auto;
-  padding: 0 1em;
 }
 
 .high-edge {
@@ -236,6 +238,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3em;
+  padding-bottom: 1em;
 }
 .sobre p {
   width: 100%;
@@ -395,6 +398,7 @@ header {
 
 #our-team h5{
   color: #ee9038;
+  margin-bottom: 1em;
 }
 
 
