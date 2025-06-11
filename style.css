@@ -128,6 +128,8 @@ header {
   place-items: center;
   place-content: center;
   text-align: center;
+  margin: 0 auto;
+  padding: 0 1em;
   
 }
 /* Imagem de fundo */
@@ -215,6 +217,8 @@ header {
   overflow: hidden;
   place-content: center;
   place-items: center;
+  margin: 0 auto;
+  padding: 0 1em;
 }
 
 .high-edge {
@@ -358,7 +362,8 @@ header {
   place-items: center;
   place-content: center;
   text-align: center;
-  padding: 2em 0;
+  margin: 0 auto;
+  padding: 0 1em;
 
 
 }
@@ -650,5 +655,12 @@ footer ion-icon{
 
   .container{
     overflow: hidden;
+  }
+    .persons {
+    grid-template-columns: 1fr;
+  }
+
+  #servicebox {
+    grid-template-columns: 1fr;
   }
 }
