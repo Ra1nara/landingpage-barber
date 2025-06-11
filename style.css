@@ -7,6 +7,12 @@
   scroll-behavior: smooth;
 }
 
+ion-icon {
+  width: 2em;
+  height: 2em;
+  color: #ebebeb;
+}
+
 
 
 html,
@@ -406,6 +412,26 @@ header {
 
 }
 
+#redes{
+  background-color:#202024;
+  height: auto;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  text-align: center;
+}
+#redes div{
+  display: grid;
+  grid-template:repeat(1,1fr)/repeat(4,1fr);
+
+  
+}
+#redes button{
+ background: none;
+  border-radius: 50%;
+  border: none;
+}
+
 
 #contact-form {
   background-image: url(./assets/mapa.png);
@@ -512,6 +538,14 @@ fieldset{
 #forms div{
   width: 100%;
   
+}
+
+#forms button{
+  background: linear-gradient(90.85deg, #EE9038 3.06%, #885220 99.68%);
+  border: none;
+  color: #ebebeb;
+  box-shadow: 1px 1px 1px #858585;
+
 }
 
 
