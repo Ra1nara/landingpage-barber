@@ -554,9 +554,18 @@ fieldset{
 
 
 footer {
-  max-width: 100vw;
-  height: 242px;
+  display: flex;
+  text-align: center;
+  font-size: 14px;
   background: rgba(32, 32, 36, 1);
+  color: #ebebeb;
+  text-align: center;
+  place-items: center;
+  place-content: center;
+}
+
+footer ion-icon{
+  width: 14px;
 }
 
 /* Responsividade */
