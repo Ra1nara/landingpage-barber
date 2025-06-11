@@ -11,21 +11,28 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(32, 32, 36, 0.9);
+
+
+.container{
+  width: 70%;
+  place-items: center;
+  place-content:center;
   height: auto;
-  padding: 0.5em 1em;
+  margin: 1em 10em 2em;
+  
 }
 
-header .container {
+
+header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 70%;
+  background-color: rgba(32, 32, 36, 0.9);
+  height: auto;
 }
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
 #logo {
   max-width: 100%;
   height: 70px;
@@ -41,7 +48,6 @@ header .container {
 
 #linksLogo {
   display: flex;
-  align-items: center;
 }
 
 #linksLogo ul {
@@ -79,6 +85,8 @@ header .container {
   min-height: 100vh;
   max-width: 100%;
   overflow: hidden; /* garante que pseudo-elemento não vaze */
+  place-content: center;
+  place-items: center;
 }
 /* Imagem de fundo */
 #home::before {
@@ -121,19 +129,14 @@ header .container {
 /* Conteúdo */
 .content {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
   flex-direction: column;
-  padding: 12%;
   position: relative;
   font-family: "League Gothic", sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
-  height: 80vh;
-  width: 100vw;
   z-index: 3;
   font-size: 3em;
-  text-align: center;
+
 }
 .content img {
   max-width: 10rem;
@@ -163,9 +166,10 @@ header .container {
 /* About */
 #about {
   width: 100%;
-  min-height: 492px;
   background-color: rgba(32, 32, 36, 1);
   overflow: hidden;
+  place-content: center;
+  place-items: center;
 }
 
 .high-edge {
@@ -194,9 +198,6 @@ header .container {
 .sobre {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-items: center;
-  margin: 4em 20em;
   gap: 3em;
 }
 .sobre p {
@@ -218,9 +219,9 @@ header .container {
   flex-direction: column;
   background: rgba(45, 46, 51, 1);
   max-width: 100vw;
-  height: 355px;
-  align-items: center;
-  justify-content: center;
+  height: auto;
+  place-content: center;
+  place-items: center;
 }
 
 #service .bigode {
@@ -245,38 +246,45 @@ header .container {
 }
 
 #servicebox {
-  display: flex;
-  margin: 1em;
-  gap: 4em;
+  max-width: 100%;
+  display: grid;
+  grid-template: repeat(1, 1fr)/repeat(4, 4fr);
+  gap: 1em;
+  overflow: hidden;
 }
 #servicebox div {
+  display: flex;
+  flex-direction: column;
   background-color: #202024;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 4);
-  justify-content: center;
-  align-items: center;
-  height: 10em;
-  width: 10em;
+  place-items: center;
   text-align: center;
+  place-content: center;
+  padding: 2em 3em;
 }
 
-#servicebox h4{
+#servicebox h4 {
   color: white;
   font-weight: 400;
   font-size: 1em;
 }
-#servicebox p{
+#servicebox p {
   color: #858585;
   font-weight: 400;
 }
 
 #servicebox img {
-  max-width: 3em;
+  max-width: 3.5em;
 }
 
+
+
 #gallery {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
   max-width: 100vw;
-  height: 855px;
+  height: auto;
   background: linear-gradient(
     99.58deg,
     #ba702c 4.18%,
@@ -284,21 +292,53 @@ header .container {
     #ba702c 96.6%
   );
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
-#gallery img {
-  max-width: 25%;
+
+#titlegallery{
+  display: flex;
+  margin-top: 1em;
+  place-items: center;
+  place-content: center;
+  gap: 1em;
+}
+
+#titlegallery h2{
+
+  color: rgb(0, 0, 0);
+  font-weight:400;
+  font-size: 2em;
+
+}
+
+
+#galleryrow {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  gap: 1em;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+#galleryrow img {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 #our-team {
   background-image: url(./assets/team-background.jpg);
-  background-repeat: no-repeat;
-  background-position: center 50%;
+  background-position: right 50%;
   max-width: 100vw;
   height: 567px;
+  position: relative;
+  z-index: 0;
+
 }
 
 #our-team::before {
-  opacity: 0.5;
+  opacity: 0.3;
+  position: relative;
+  z-index: 1;
 }
 
 #brands {
@@ -379,21 +419,30 @@ footer {
 }
 
 /* Responsividade */
+
+/* Para telas menores, como tablets */
 @media (max-width: 1024px) {
-  /* Para telas menores, como tablets */
+  .container{
+    width: 70%;
+  }
   .content {
     font-size: 2.5rem;
   }
   .sobre {
     display: flex;
     flex-wrap: wrap;
-    margin: 3em 4em;
+  }
+
+  #galleryrow {
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  }
+  #servicebox{ 
+  grid-template: repeat(2, 2fr)/repeat(2, 2fr);
   }
 }
-
+/* Para celulares */
 @media (max-width: 450px) {
-  /* Para celulares */
-  .container {
+  .container{
     width: 90%;
   }
   #menu-toggle {
@@ -428,11 +477,11 @@ footer {
     font-size: 1.5em;
   }
 
-  .sobre {
-    margin: 0.8em 1em;
+  .container {
+    margin: 0.8em 1.5em;
   }
 
-  .sobre p {
-    font-size: 14px;
+  #galleryrow {
+    grid-template: repeat(6, 1fr) / repeat(2, 1fr);
   }
 }
