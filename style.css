@@ -588,11 +588,7 @@ footer ion-icon{
   .content {
     font-size: 2.5rem;
   }
-  .sobre {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
+  
   #galleryrow {
     grid-template: repeat(4, 1fr) / repeat(3, 1fr);
   }
