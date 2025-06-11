@@ -1,3 +1,4 @@
+/*-- GLOBAL --*/
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +6,8 @@
   font-family: "League Gothic", sans-serif;
   scroll-behavior: smooth;
 }
+
+
 
 html,
 body {
@@ -26,7 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0.8em 3em;
+  margin: 0.3em 3em;
   gap: 1em;
 
 }
@@ -43,7 +46,7 @@ h5{
   font-weight: 400;
 }
 
-
+/*-- HEADER --*/
 header {
   display: flex;
   background-color: rgba(32, 32, 36, 0.9);
@@ -105,9 +108,10 @@ header {
   cursor: pointer;
 }
 
+/*-- HOME --*/
 #home {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 100%;
   overflow: hidden; /* garante que pseudo-elemento não vaze */
   place-items: center;
@@ -236,6 +240,7 @@ header {
   max-height: 80%;
 }
 
+/*-- SERVICE --*/
 #service {
   display: flex;
   flex-direction: column;
@@ -263,7 +268,7 @@ header {
 #servicebox {
   max-width: 100%;
   display: grid;
-  grid-template: repeat(1, 1fr)/repeat(4, 4fr);
+  grid-template: repeat(1, 1fr)/repeat(4, 1fr);
   gap: 1em;
   overflow: hidden;
 }
@@ -292,7 +297,7 @@ header {
 }
 
 
-
+/*-- GALLERY --*/
 #gallery {
   display: flex;
   flex-direction: column;
@@ -330,6 +335,7 @@ header {
   border-radius: 8px;
 }
 
+/*-- EQUIPE --*/
 #our-team {
   background-image: url(./assets/team-background.jpg);
   background-position: right;
@@ -399,27 +405,6 @@ header {
 
 }
 
-
-
-
-
-#brands {
-  max-width: 100vw;
-  height: 164px;
-  background: rgba(202, 122, 46, 1);
-}
-
-#our-numbers {
-  max-width: 100vw;
-  height: 366px;
-  background: linear-gradient(88.42deg, #202024 0%, #2e2f33 97.64%);
-}
-
-#share-social {
-  width: 100vw;
-  height: 70px;
-  background: linear-gradient(191.53deg, #292a2e 8.11%, #434347 91.17%);
-}
 
 #contact-form {
   background-image: url(./assets/mapa.png);
@@ -511,7 +496,7 @@ footer {
 /* Para celulares */
 @media (max-width: 450px) {
   .container{
-    width: 90%;
+    width: 80%;
   }
   #menu-toggle {
     display: block;
