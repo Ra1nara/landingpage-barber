@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "League Gothic", sans-serif;
+  scroll-behavior: smooth;
   
 }
 
@@ -18,8 +19,6 @@ ion-icon {
 html,
 body {
   overflow-x: hidden;
-  scroll-behavior: smooth;
-  
 }
 
 .container{
