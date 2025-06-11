@@ -19,7 +19,26 @@ body {
   place-content:center;
   height: auto;
   margin: 1em 10em 2em;
-  
+  z-index: 3;
+}
+
+.texture{
+  content: "";
+  position: absolute;
+  background-color: #000000a9;
+  pointer-events: none;
+  z-index: 1;
+
+}
+
+h2{
+  font-weight: 400;
+  font-size: 2em;
+}
+
+h3{
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
 
@@ -27,6 +46,8 @@ header {
   display: flex;
   background-color: rgba(32, 32, 36, 0.9);
   height: auto;
+  place-items: center;
+  place-content: center;
 }
 .menu {
   display: flex;
@@ -85,8 +106,9 @@ header {
   min-height: 100vh;
   max-width: 100%;
   overflow: hidden; /* garante que pseudo-elemento não vaze */
-  place-content: center;
   place-items: center;
+  place-content: center;
+  
 }
 /* Imagem de fundo */
 #home::before {
@@ -191,8 +213,7 @@ header {
 
 #title-about h2 {
   color: white;
-  font-weight: 400;
-  font-size: 2em;
+  
 }
 
 .sobre {
@@ -236,8 +257,6 @@ header {
 
 #title-service h2 {
   color: white;
-  font-weight: 400;
-  font-size: 2em;
 }
 
 #service h3 {
@@ -304,11 +323,7 @@ header {
 }
 
 #titlegallery h2{
-
   color: rgb(0, 0, 0);
-  font-weight:400;
-  font-size: 2em;
-
 }
 
 
@@ -393,13 +408,10 @@ header {
 #contact-form h2 {
   margin: 1em auto 0;
   color: white;
-  font-size: 44px;
-  font-weight: 400;
+  
 }
 #contact-form h3 {
   color: rgba(238, 144, 56, 1);
-  font-size: 16px;
-  font-weight: 400;
   margin-bottom: 2em;
 }
 
@@ -422,6 +434,15 @@ footer {
 
 /* Para telas menores, como tablets */
 @media (max-width: 1024px) {
+  h1{
+    font-size: 2.5em;
+  }
+  h2{
+    font-size: 2em;
+  }
+  h3{
+    font-size: 1.8em;
+  }
   .container{
     width: 70%;
   }
@@ -473,8 +494,14 @@ footer {
     font-size: 2rem;
   }
 
-  #about h1 {
-    font-size: 1.5em;
+  h1 {
+  font-size: 2em;
+  }
+  h2{
+  font-size: 1.5em;
+  }
+  h3{
+    font-size: 1.2em;
   }
 
   .container {
