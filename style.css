@@ -28,7 +28,6 @@ body {
   place-content:center;
   text-align: center;
   height: auto;
-  margin: 1em 2em;
   position: relative;
   z-index: 3;
 }
@@ -44,13 +43,13 @@ body {
 
 h2,
 h3{
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 400;
 }
 
 h4,
 h5{
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-weight: 400;
 }
 
@@ -60,12 +59,15 @@ header {
   background-color: rgba(32, 32, 36, 0.9);
   height: auto;
   place-items: center;
-  justify-content: space-between;
+  place-content: center;
+  text-align: center;
   
 }
 .menu {
   display: grid;
   grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+  gap: 2em;
+  justify-content: space-between;
   
 }
 
@@ -124,6 +126,7 @@ header {
   overflow: hidden; /* garante que pseudo-elemento não vaze */
   place-items: center;
   place-content: center;
+  text-align: center;
   
 }
 /* Imagem de fundo */
@@ -475,10 +478,8 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-form{
-  margin: 2em;
+  font-weight: 400;
+  
 }
 
 #contact-form h2 {
@@ -515,9 +516,6 @@ fieldset{
   border: none;
   background: none;
 }
-#forms div{
-  border-bottom: 1px solid #ffffff;
-}
 
 #forms input:focus,
 #forms textarea {
@@ -539,6 +537,8 @@ fieldset{
 
 #forms div{
   width: 100%;
+  border-bottom: 1px solid #ffffff;
+  
   
 }
 
@@ -547,7 +547,11 @@ fieldset{
   border: none;
   color: #ebebeb;
   box-shadow: 1px 1px 1px #858585;
+  font-weight: 400;
 
+}
+form{
+  margin: 2em auto;
 }
 
 
