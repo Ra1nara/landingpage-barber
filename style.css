@@ -339,6 +339,7 @@ header {
   overflow: hidden;
   place-items: center;
   place-content: center;
+  text-align: center;
   padding: 2em 0;
 
 
@@ -369,13 +370,13 @@ header {
 }
 
 #our-team h2,
-#our-team h3{
+#our-team h4{
   color: white;
   position: relative;
   z-index: 3;
 }
-#our-team h4{
-  color: white;
+#our-team h3{
+  color:#ee9038;
   position: relative;
   z-index: 3;
 }
@@ -536,13 +537,13 @@ footer {
 
 
   h1 {
-  font-size: 1.7em;
-  }
-  h2{
   font-size: 1.5em;
   }
+  h2{
+  font-size: 1.3em;
+  }
   h3{
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .container {
