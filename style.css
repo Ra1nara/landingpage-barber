@@ -637,10 +637,6 @@ footer ion-icon{
     font-size: 1.1em;
   }
 
-  .container {
-    margin: 0.8em 1.5em;
-  }
-
   #galleryrow {
     grid-template: repeat(6, 1fr) / repeat(2, 1fr);
   }
