@@ -4,12 +4,12 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "League Gothic", sans-serif;
-  scroll-behavior: smooth;
+  
 }
 
 ion-icon {
-  width: 2em;
-  height: 2em;
+  width: min(2em, 6vw);
+  height: min(2em, 6vw);
   color: #ebebeb;
 }
 
@@ -18,17 +18,18 @@ ion-icon {
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   
 }
 
 .container{
   width: 70%;
-  align-items: center;
-  align-content: center ;
-  justify-items: center ;
-  justify-content:space-between;
-  text-align: center;
+  display: flex;
   height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   position: relative;
   z-index: 3;
 }
@@ -61,12 +62,11 @@ header {
   height: auto;
   place-items: center;
   place-content: center;
-  text-align: center;
   
 }
 .menu {
   display: grid;
-  grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2em;
   justify-content: space-between;
   
@@ -124,10 +124,8 @@ header {
   position: relative;
   min-height: 100dvh;
   max-width: 100%;
-  overflow: hidden; /* garante que pseudo-elemento não vaze */
   place-items: center;
   place-content: center;
-  text-align: center;
   margin: 0 auto;
   padding: 0 1em;
   
@@ -175,12 +173,10 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  font-family: "League Gothic", sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
   z-index: 3;
   font-size: 3em;
-  text-align: center;
   place-content: center;
   place-items: center;
 
@@ -214,7 +210,6 @@ header {
 #about {
   width: 100%;
   background-color: rgba(32, 32, 36, 1);
-  overflow: hidden;
   place-content: center;
   place-items: center;
   margin: 0 auto;
@@ -249,7 +244,6 @@ header {
   font-weight: 400;
   font-size: 16px;
   font-family: "open sans", sans-serif;
-  text-align: center;
 }
 .sobre img {
   max-width: 100%;
@@ -284,16 +278,14 @@ header {
 #servicebox {
   max-width: 100%;
   display: grid;
-  grid-template: repeat(1, 1fr)/repeat(4, 1fr);
+  grid-template-columns:repeat(4, 1fr);
   gap: 1em;
-  overflow: hidden;
 }
 #servicebox div {
   display: flex;
   flex-direction: column;
   background-color: #202024;
   place-items: center;
-  text-align: center;
   place-content: center;
   padding: 2em 3em;
 }
@@ -328,7 +320,6 @@ header {
     #ba702c 96.6%
   );
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
   padding: 2em 0;
 }
 
@@ -358,10 +349,8 @@ header {
   background-size: 100%;
   position: relative;
   z-index: 0;
-  overflow: hidden;
   place-items: center;
   place-content: center;
-  text-align: center;
   margin: 0 auto;
   padding: 0 1em;
 
@@ -412,9 +401,8 @@ header {
 
 .persons{
   display: grid;
-  grid-template: repeat(1, 1fr)/ repeat(3,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap: 1em;
-  text-align: center;
 }
 .persons img{
   max-width: 80%;
@@ -428,11 +416,10 @@ header {
   display: flex;
   place-items: center;
   place-content: center;
-  text-align: center;
-}
+} 
 #redes div{
   display: grid;
-  grid-template:repeat(1,1fr)/repeat(4,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap: 1em;
 
   
@@ -526,13 +513,11 @@ fieldset{
 #forms input:focus,
 #forms textarea {
   outline: none;
-  border: none; /* se quiser tirar a borda também */
  color: #ffffff;
 }
 
 #forms textarea{
   resize: none;      /* impede redimensionamento manual */
-  overflow: hidden;  /* remove a barra de rolagem */
   width: 100%;
   
 }
@@ -567,13 +552,11 @@ form{
 
 footer {
   display: flex;
-  text-align: center;
   font-size: 14px;
   background: rgba(32, 32, 36, 1);
   color: #ebebeb;
   text-align: center;
-  place-items: center;
-  place-content: center;
+  justify-content: center;
 }
 
 footer ion-icon{
@@ -651,10 +634,6 @@ footer ion-icon{
 
   #galleryrow {
     grid-template: repeat(6, 1fr) / repeat(2, 1fr);
-  }
-
-  .container{
-    overflow: hidden;
   }
     .persons {
     grid-template-columns: 1fr;
