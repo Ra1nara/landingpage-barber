@@ -28,7 +28,7 @@ body {
   place-content:center;
   text-align: center;
   height: auto;
-  margin: 1em 10em 2em;
+  margin: 1em 2em;
   position: relative;
   z-index: 3;
 }
