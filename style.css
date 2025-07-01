@@ -352,6 +352,7 @@ header {
   place-items: center;
   place-content: center;
   text-align: center;
+  padding: 1.5em 0;
 }
 /* Overlay */
 #our-team::before {
@@ -588,6 +589,11 @@ footer ion-icon {
 @media (max-width: 450px) {
   .container {
     width: 80%;
+  }
+
+  header{
+    place-content: space-between;
+    place-items: center;
   }
   #menu-toggle {
     display: block;
