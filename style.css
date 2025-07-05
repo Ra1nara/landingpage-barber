@@ -58,8 +58,8 @@ header {
   display: flex;
   background-color: rgba(32, 32, 36, 0.9);
   height: auto;
-  place-items: center;
-  place-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .menu {
   display: grid;
@@ -91,6 +91,11 @@ header {
   flex-wrap: wrap;
   gap: 1em;
   transition: all 0.3s ease-in-out;
+}
+
+#linksLogo ul.show {
+  display: none;
+  flex-direction: column;
 }
 
 #linksLogo ul li {
@@ -560,6 +565,40 @@ footer ion-icon {
   h3 {
     font-size: 1.8em;
   }
+    .menu {
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      z-index: 1001;
+    
+    }
+  
+    #menu-toggle {
+      display: block;
+    }
+  
+    #linksLogo ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      background-color: rgb(32, 32, 36);
+      flex-direction: column;
+      width: 200px;
+      border-radius: 8px;
+      
+    }
+  
+    #linksLogo ul.show {
+      display: flex;
+      align-items: center;
+      padding: 2em;
+      width: 70%;
+      right: 0;
+    }
+  
+    #linksLogo ul li {
+      padding: 0.5rem 0;
+    }
   .container {
     width: 70%;
   }
@@ -573,7 +612,6 @@ footer ion-icon {
     place-items: center;
     place-content: center;
   }
-
   .sobre img {
     max-width: 80%;
   }
@@ -591,31 +629,7 @@ footer ion-icon {
     width: 80%;
   }
 
-  header{
-    place-content: space-between;
-    place-items: center;
-  }
-  #menu-toggle {
-    display: block;
-  }
 
-  #linksLogo ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: rgba(32, 32, 36, 0.95);
-    flex-direction: column;
-    width: 200px;
-    border-radius: 8px;
-  }
-
-  #linksLogo ul.show {
-    display: flex;
-  }
-
-  #linksLogo ul li {
-    padding: 0.5rem 0;
-  }
 
   h1 {
     font-size: 1.5em;
@@ -629,9 +643,6 @@ footer ion-icon {
 
   #galleryrow {
     grid-template: repeat(6, 1fr) / repeat(2, 1fr);
-  }
-  .persons {
-    grid-template-columns: 1fr;
   }
 
   #servicebox {
