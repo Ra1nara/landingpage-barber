@@ -54,11 +54,13 @@ header {
   background-color: rgba(32, 32, 36, 0.9);
   height: auto;
   align-items: center;
-  justify-items: center;
+  
 }
 .menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
   justify-content: space-between;
 }
 
