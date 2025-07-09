@@ -32,10 +32,10 @@ body {
 }
 .title {
   display: flex;
-  place-items: center;
-  place-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 0.3em;
+  margin-bottom: 0.8em;
   gap: 1em;
   position: relative;
   z-index: 3;
@@ -228,7 +228,6 @@ header {
 
 #about h2 {
   color: white;
-  margin-bottom: 1.2em;
 }
 
 .sobre {
@@ -272,12 +271,6 @@ header {
   color: white;
 }
 
-#service h3 {
-  color: #ba702c;
-  font-weight: 400;
-  margin-bottom: 1.2em;
-}
-
 #servicebox {
   max-width: 100%;
   display: grid;
@@ -311,8 +304,8 @@ header {
 #gallery {
   display: flex;
   flex-direction: column;
-  place-content: center;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   max-width: 100vw;
   height: auto;
   background: linear-gradient(
@@ -390,14 +383,6 @@ header {
   color: white;
   position: relative;
   z-index: 3;
-  margin-bottom: 0.8em;
-
-}
-#our-team h3 {
-  color: #ee9038;
-  position: relative;
-  z-index: 3;
-  margin-bottom: 1.2em;
 
 }
 
