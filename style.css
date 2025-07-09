@@ -531,12 +531,19 @@ footer {
   background: rgba(32, 32, 36, 1);
   color: #ebebeb;
   text-align: center;
+  align-items: center;
   justify-content: center;
   padding-bottom: 0.8em;
 }
 
 footer ion-icon {
+  align-items: center;
   width: 14px;
+}
+
+footer a{
+  color: #ee9038;
+  text-decoration: none;
 }
 
 /* Responsividade */
