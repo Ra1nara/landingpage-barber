@@ -31,12 +31,12 @@ body {
   z-index: 3;
 }
 .title {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-bottom: 0.8em;
-  gap: 1em;
   position: relative;
   z-index: 3;
 }
@@ -45,7 +45,6 @@ h2,
 h3 {
   font-size: 1.4em;
   font-weight: 400;
-  width: 100%;
 }
 
 h4,
@@ -326,7 +325,7 @@ header {
 #gallery h3 {
   color: #202024;
   font-weight: 400;
-  margin-bottom: 1.2em;
+  margin-bottom: 0.6em;
 }
 
 #galleryrow {
@@ -551,14 +550,8 @@ footer a{
 
 /* Para telas menores, como tablets */
 @media (max-width: 1024px) {
-  h1 {
-    font-size: 2.5em;
-  }
-  h2 {
-    font-size: 2em;
-  }
-  h3 {
-    font-size: 1.8em;
+  h1,h2,h3 {
+    font-size: 1.3em;
   }
     .menu {
       align-items: center;
@@ -623,18 +616,18 @@ footer a{
   .container {
     width: 80%;
   }
-
-
-
-  h1 {
-    font-size: 1.5em;
+  h1{
+    font-size: 3rem;
   }
-  h2 {
-    font-size: 1.3em;
+   h2, h3{
+    font-size: 1.5rem;
   }
-  h3 {
-    font-size: 1.1em;
+
+  #home h2{
+    font-size: 2.5rem;
   }
+
+   
 
   #galleryrow {
     grid-template: repeat(6, 1fr) / repeat(2, 1fr);
